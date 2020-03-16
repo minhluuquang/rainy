@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Rainy Mood &#8226; #1 Rain Sounds &#8226; Sleep &amp; Study</title>
+    <meta
+      name="description"
+      content="Welcome to Rainy Mood, the internet's most popular rain sounds. Millions of people use Rainy Mood while sleeping, studying, and relaxing. Enjoy the free web version, or try the iOS/Android app with additional features."
+    />
+    <meta property="og:title" content="Rainy Mood" />
+    <meta
+      property="og:description"
+      content="Welcome to Rainy Mood, the internet's most popular rain sounds. Millions of people use Rainy Mood while sleeping, studying, and relaxing. Enjoy the free web version, or try the iOS/Android app with additional features."
+    />
+    <meta property="og:url" content="https://www.rainymood.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="fb:app_id" content="355098931343287" />
+    <meta property="og:image" content="https://rainymood.com/i/badge.jpg" />
+    <link rel="manifest" href="/site.webmanifest?v=oLBgER8B5r" />
+    <link
+      rel="mask-icon"
+      href="/safari-pinned-tab.svg?v=oLBgER8B5r"
+      color="#5bbad5"
+    />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="apple-mobile-web-app-title" content="Rainy Mood" />
+    <meta name="application-name" content="Rainy Mood" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no"
+    />
+  </head>
+  <body style="background-image:url('img/bg.jpg');">
+    <div class="center-container">
+      <div class="center-block">
+        <div id="audioplayerskin">
+          <button id="pButton" class="play" onclick="playAudio();"></button>
+          <div id="volume_control">
+            <input
+              type="range"
+              oninput="setVolume(this.value)"
+              onchange="setVolume(this.value)"
+              id="rngVolume"
+              min="0"
+              max="1"
+              step="0.01"
+              value="1"
+            />
+          </div>
+        </div>
+        <audio id="audioplayer" loop="loop">
+          <source src="audio/0.m4a" type="audio/mp4" />
+          <source src="track.ogg" type="audio/ogg" />
+          <source src="track.mp3" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+        <script>
+          var music = document.getElementById("audioplayer");
+          function playAudio() {
+            if (music.paused) {
+              music.play();
+              pButton.className = "";
+              pButton.className = "pause";
+
+              /* Tell Analytics about longSession */
+              var anc = false;
+              window.setInterval(function() {
+                if (!anc) {
+                  ga("send", "event", "longSession15", "longSession15");
+                  anc = true;
+                }
+              }, 900000);
+            } else {
+              music.pause();
+              pButton.className = "";
+              pButton.className = "play";
+            }
+          }
+          function setVolume(volume) {
+            music.volume = volume;
+          }
+        </script>
+        <h1>Rainy Mood<reg>&reg;</reg></h1>
+        <p>Rain Sounds for Sleep &amp; Study</p>
+      </div>
+    </div>
+  </body>
+</html>

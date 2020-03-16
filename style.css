@@ -1,0 +1,292 @@
+html,
+body {
+  height: 100%;
+}
+
+html {
+  color: #222;
+  line-height: 1.4;
+}
+
+body {
+  margin: 0;
+  background-position: center;
+  background-size: auto 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #000;
+  font-size: 20px;
+  color: #fff;
+}
+
+/* fontsquirrel */
+/* @font-face {
+  font-family: "marcellus_scregular";
+  src: url("/css/marcellussc-regular-webfont.eot");
+  src: url("/css/marcellussc-regular-webfont.eot?#iefix")
+      format("embedded-opentype"),
+    url("/css/marcellussc-regular-webfont.woff2") format("woff2"),
+    url("/css/marcellussc-regular-webfont.woff") format("woff"),
+    url("/css/marcellussc-regular-webfont.ttf") format("truetype"),
+    url("/css/marcellussc-regular-webfont.svg#marcellus_scregular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+} */
+
+.nobr {
+  white-space: nowrap;
+}
+
+* {
+  font-family: "marcellus_scregular", serif;
+  text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.55);
+}
+
+reg {
+  font-size: 20px;
+  line-height: 0;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+.youtube-embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+.youtube-embed-container iframe,
+.youtube-embed-container object,
+.youtube-embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0px;
+}
+
+a {
+  color: #fff;
+}
+
+.PT {
+  color: #444;
+}
+a.PT {
+  color: #444;
+}
+
+h1,
+h2 {
+  margin: 0;
+  cursor: default;
+}
+
+h1 {
+  font-size: 80px;
+  line-height: 80px;
+}
+
+h2 {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+p {
+  cursor: default;
+}
+
+.center-container {
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  text-align: center;
+}
+
+.center-container:after,
+.center-block {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.center-container:after {
+  content: "";
+  height: 100%;
+  margin-left: -0.25em;
+}
+
+.center-block {
+  max-width: 98%;
+}
+
+/* media queries */
+
+@media only screen and (max-width: 550px) {
+  h1 {
+    font-size: 45px;
+    line-height: 45px;
+  }
+  h2 {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  body {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+
+/* New Audio Button 2018 */
+
+#audioplayerskin {
+  width: 300px;
+  height: auto;
+  margin: auto auto 20px auto;
+
+  text-align: center;
+  background-color: rgba(5, 173, 13, 0.49);
+  background-color: transparent;
+}
+
+#pButton {
+  height: 130px;
+  width: 130px;
+  border: none;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  outline: none;
+}
+
+.play {
+  background: url("https://rainymood.com/i/play4.png");
+  border-radius: 50%;
+  animation: animate 5s linear infinite;
+  cursor: pointer;
+}
+
+.pause {
+  background: url("https://rainymood.com/i/pause4.png");
+  border-radius: 50%;
+  animation: animate 5s linear 1;
+  cursor: pointer;
+}
+
+@keyframes animate {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.15);
+  }
+  40% {
+    box-shadow: 0 0 0 100px rgba(255, 255, 255, 0);
+  }
+  80% {
+    box-shadow: 0 0 0 100px rgba(255, 255, 255, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 rgba(255, 255, 255, 0);
+  }
+}
+
+#volume_control {
+  margin: auto;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  width: 50%;
+}
+
+/* range style from http://danielstern.ca/range.css/#/ */
+/* the IE thumb was modified to look square */
+
+input[type="range"] {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 6.05px 0;
+}
+input[type="range"]:focus {
+  outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 2.9px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #310000, 0px 0px 0px #4b0000;
+  background: #ffffff;
+  border-radius: 0px;
+  border: 0px solid #000000;
+}
+input[type="range"]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 0px solid #ffffff;
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -6.05px;
+}
+input[type="range"]:focus::-webkit-slider-runnable-track {
+  background: #ffffff;
+}
+input[type="range"]::-moz-range-track {
+  width: 100%;
+  height: 2.9px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #310000, 0px 0px 0px #4b0000;
+  background: #ffffff;
+  border-radius: 0px;
+  border: 0px solid #000000;
+}
+input[type="range"]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 0px solid #ffffff;
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type="range"]::-ms-track {
+  width: 100%;
+  height: 2.9px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type="range"]::-ms-fill-lower {
+  background: #f2f2f2;
+  border: 0px solid #000000;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px #310000, 0px 0px 0px #4b0000;
+}
+input[type="range"]::-ms-fill-upper {
+  background: #ffffff;
+  border: 0px solid #000000;
+  border-radius: 0px;
+  box-shadow: 0px 0px 0px #310000, 0px 0px 0px #4b0000;
+}
+input[type="range"]::-ms-thumb {
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  border: 0px solid #ffffff;
+  height: 15px;
+  width: 15px;
+  border-radius: 0px;
+  background: #ffffff;
+  cursor: pointer;
+  height: 17.9px; /* was 2.9px */
+}
+input[type="range"]:focus::-ms-fill-lower {
+  background: #ffffff;
+}
+input[type="range"]:focus::-ms-fill-upper {
+  background: #ffffff;
+}
